@@ -9,6 +9,8 @@
     $dagdeelid = '';
     $datum = '';
     $luxe = '';
+    $emaila = '';
+    $wwa = '';
     $id = 0;
     $update = false;
     $Boten ='';
@@ -66,5 +68,25 @@
         $id = $_GET['delBoten'];
         db_insertData("DELETE FROM Boot WHERE id=$id");
         header('location: Boten.php');
+    }
+    if(isset($_POST['saveadmin'])) {
+        $emaila = $_POST['email'];
+        $wwa = $_POST['ww'];
+        db_insertData("INSERT INTO Admin (Email, Password) VALUES ('$emaila','$wwa')");
+        header('location: admins.php');
+    }
+
+    if (isset($_POST['updateadmin'])) {
+        $emaila = $_POST['email'];
+        $wwa = $_POST['ww'];
+        $id = $_POST['id'];
+        db_insertData("UPDATE Admin SET Email='$emaila', Password='$wwa' WHERE id=$id");
+        header('location: admins.php');
+    }
+
+    if (isset($_GET['deladmin'])) {
+        $id = $_GET['deladmin'];
+        db_insertData("DELETE FROM Admin WHERE id=$id");
+        header('location: admins.php');
     }
 ?>
