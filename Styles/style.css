@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.headercontainer {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.container {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.boot>div {
+    margin: 10px 10px 10px 0;
+}
+
+.boot>div>img {
+    width: 300px;
+    height: 200px;
+}
+
+select, input, button, textarea {
+    border: 1px solid #000;
+    border-radius: 3px;
+}
+
+.knop {
+    padding: 10px 15px;
+    background-color: rgb(15, 228, 210);
+    color: white;
+    font-weight: 700;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.redcard, .greycard {
+    padding: 10px;
+    -webkit-box-shadow: 6px 10px 15px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 10px 15px -6px rgba(0,0,0,0.75);
+    box-shadow: 6px 10px 15px -6px rgba(0,0,0,0.75);
+    border: solid 1px #000;
+}
+
+.redcard {
+    background-color: red;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    color: #fff;
+}
+
+.greycard {
+    background-color: #fff;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    color: #000;
+}
+
+.text-xl-2 {
+    font-size: 28px;
+}
+
+tr{
+    text-align: center;
+}
+
+td, th {
+    border: solid 1px #000;
+    padding: 5px;
+}
+
+.Verwijderbutton, .Editbutton {
+    padding: 5px 10px;
+    border-radius: 3px;
+    border: solid 1px #000;
+}
+
+.Verwijderbutton {
+    background-color: red;
+}
+
+.Editbutton {
+    background-color: lime;
+}
