@@ -29,12 +29,12 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="link text-white" href="bestellingen.php">
-                                        Gebruikers
+                                    <a class="link text-white" href="admins.php">
+                                        Admins
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="link text-white" href="bestellingen.php">
+                                    <a class="link text-white" href="boten.php">
                                         Boten
                                     </a>
                                 </li>

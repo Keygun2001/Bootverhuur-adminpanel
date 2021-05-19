@@ -9,6 +9,8 @@
     $dagdeelid = '';
     $datum = '';
     $luxe = '';
+    $emaila = '';
+    $wwa = '';
     $id = 0;
     $update = false;
 
@@ -45,5 +47,26 @@
         $id = $_GET['delbestelling'];
         db_insertData("DELETE FROM verhuur WHERE id=$id");
         header('location: bestellingen.php');
+    }
+
+    if(isset($_POST['saveadmin'])) {
+        $emaila = $_POST['email'];
+        $wwa = $_POST['ww'];
+        db_insertData("INSERT INTO Admin (Email, Password) VALUES ('$emaila','$wwa')");
+        header('location: admins.php');
+    }
+
+    if (isset($_POST['updateadmin'])) {
+        $emaila = $_POST['email'];
+        $wwa = $_POST['ww'];
+        $id = $_POST['id'];
+        db_insertData("UPDATE Admin SET Email='$emaila', Password='$wwa' WHERE id=$id");
+        header('location: admins.php');
+    }
+
+    if (isset($_GET['deladmin'])) {
+        $id = $_GET['deladmin'];
+        db_insertData("DELETE FROM Admin WHERE id=$id");
+        header('location: admins.php');
     }
 ?>
