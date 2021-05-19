@@ -11,6 +11,9 @@
     $luxe = '';
     $id = 0;
     $update = false;
+    $Boten ='';
+    $Price = '';
+
 
     if(isset($_POST['savebestelling'])) {
         $vnaam = $_POST['vnaam'];
@@ -45,5 +48,23 @@
         $id = $_GET['delbestelling'];
         db_insertData("DELETE FROM verhuur WHERE id=$id");
         header('location: bestellingen.php');
+    }
+    if (isset($_POST['updateBoten'])) {
+        $Boten=$_POST['BoatName'];
+        $Price=$_POST['Price'];
+        $id = $_POST['id'];
+        db_insertData("UPDATE Boot SET BoatName='$Boten', Price='$Price' WHERE id=$id");
+        header('location: Boten.php');
+    }
+    if(isset($_POST['saveBoten'])) {
+        $Boten=$_POST['BoatName'];
+        $Price=$_POST['Price'];
+        db_insertData("INSERT INTO Boot (BoatName, Price) VALUES ('$Boten','$Price')");
+        header('location: Boten.php');
+    }
+    if (isset($_GET['delBoten'])) {
+        $id = $_GET['delBoten'];
+        db_insertData("DELETE FROM Boot WHERE id=$id");
+        header('location: Boten.php');
     }
 ?>
