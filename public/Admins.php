@@ -42,7 +42,7 @@
                             <th>Edit</th>
                             <th>Verwijderen</th>
                         </tr>
-                        <?php print_r($results); while($row = $results->fetch_assoc()) { ?>
+                        <?php while($row = $results->fetch_assoc()) { ?>
                             <tr>
                                 <td>
                                     <?php echo $row['id']; ?>
